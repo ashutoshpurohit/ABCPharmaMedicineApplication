@@ -1,0 +1,13 @@
+version: '3.4'
+
+
+services:
+
+  medicaldb:
+    image: mcr.microsoft.com/mssql/server
+
+  pharma.medicine.api:
+    image: ${DOCKER_REGISTRY-}pharmamedicineapi
+    build:
+      context: .
+      dockerfile: src/PharmaMedicine/Pharma.Medicine.API/Dockerfile

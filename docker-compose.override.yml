@@ -1,0 +1,24 @@
+version: '3.4'
+
+
+services:
+  medicaldb:
+    container_name: medicaldb
+    restart: always
+    ports:
+      - "1434:1433" 
+    environment:
+      SA_PASSWORD: "Pranav@14"
+      ACCEPT_EULA: "Y"
+
+  pharma.medicine.api:
+    container_name: pharmamedicine
+    restart: on-failure
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:MedicineConnection=Server=localhost;Database=MedicineDb;User Id=sa;Password=Pranav@14;"
+    depends_on:
+     - medicaldb
+    ports:
+     - "8002:80"
+

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pharma.Medicine.CoreEntity\Pharma.Medicine.CoreEntity.csproj" />
+    <ProjectReference Include="..\Pharma.Medicine.InfraStructure\Pharma.Medicine.InfraStructure.csproj" />
+  </ItemGroup>
+
+</Project>

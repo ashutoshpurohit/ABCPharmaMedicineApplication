@@ -1,0 +1,53 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "api/v1/PharmaMedicine",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medicineapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/PharmaMedicine",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "api/v1/PharmaMedicine/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medicineapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/PharmaMedicine/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "api/v1/PharmaMedicine/GetMedicineByName/{name}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medicineapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/PharmaMedicine/GetMedicineByName/{name}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "api/v1/PharmaMedicine/GetMedicineByBrand/{brand}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medicineapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/PharmaMedicine/GetMedicineByBrand/{brand}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+
+  ]
+}
